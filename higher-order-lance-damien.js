@@ -53,8 +53,13 @@ console.log(newFilter(filterArrayValues))
 // STRETCH Challenges
 
 // Create a function that takes in a string and returns a new string with all the vowels removed.
-// var str = "javascript is awesome"
+var str = "javascript is awesome"
 // // --> "jvscrpt s wsm"
+const removeVowels = (string) => {
+    let voweless = string.filter(value => {
+        return value !== 
+    })
+}
 // Create a function that takes in two arrays as arguments returns one array with no duplicate values.
 // var arr1 = [3, 7, 10, 5, 4, 3]
 // var arr2 = [7, 8, 2, 1, 5, 4]
