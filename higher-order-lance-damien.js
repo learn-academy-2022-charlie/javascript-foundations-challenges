@@ -57,7 +57,7 @@ var str = "javascript is awesome"
 // // --> "jvscrpt s wsm"
 const removeVowels = (string) => {
     let voweless = string.filter(value => {
-        return value !== 
+        return value
     })
 }
 // Create a function that takes in two arrays as arguments returns one array with no duplicate values.
