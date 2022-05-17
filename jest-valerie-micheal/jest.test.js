@@ -24,7 +24,6 @@ describe("relaxStressed", () => {
     expect(relaxStressed("yes")).toEqual("relax")
   })
 })
-
 const relaxStressed = (answer) => {
   if(answer === "yes") {
     return `relax`
@@ -55,13 +54,25 @@ const budget = (price) => {
     return 'error'
   }
 }
-console.log(budget(400))
-
-
-
 
 // Write the test for a function that takes in two arguments(numbers) and returns the smaller number.
 // Write the function that will make the test pass.
+
+describe("numbers", () => {
+  it("takes two numbers and returns the smaller number", () => {
+    expect(numbers(30, 40)).toEqual(30)
+  })
+})
+
+const numbers = (num1, num2) => {
+  if(num1 === num2) {
+    return `They are equal`
+  } else if (num1 < num2) {
+    return num1
+  } else {
+    return num2
+  }
+}
 
 
 // Write the test for a function that takes in one argument(number) and returns whether the number is odd.
