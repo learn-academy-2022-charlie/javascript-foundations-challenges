@@ -84,8 +84,73 @@ stressLevel()
 // ✨  Done in 5.58s.
 
 // Write the test for a function that returns "in budget" if a price is lower than $300.
+
+describe("inBudget", () => {
+    it("returns in budget if price is lower than 300", () => {
+        expect(inBudget(cash)).toEqual("in budget")
+    })
+})
+
+// FAIL  jest-collin-logan/jest.test.js
+// alertness
+//   ✓ returns drink coffee if tired or keep working if not tired (3 ms)
+// stressLevel
+//   ✓ returns relax if you are stressed and keep going if you are not stressed (1 ms)
+// inBudget
+//   ✕ returns in budget if price is lower than 300 (3 ms)
+
+// ● inBudget › returns in budget if price is lower than 300
+
+//   ReferenceError: inBudget is not defined
+
 // Write the function that will make the test pass.
+let cash = 99
+
+const inBudget = (number) => {
+    if(number <= 300){
+        return "in budget"
+    }
+    
+}
+
+inBudget(cash)
+
+
 // Write the test for a function that takes in two arguments(numbers) and returns the smaller number.
+
+describe("smallNum", () => {
+    it("takes in two arguments and returns the smaller number", () => {
+         let num1 = 24
+         let num2 = 76
+        expect(smallNum(num1, num2)).toEqual(num1)
+    })
+})
+
+// FAIL  jest-collin-logan/jest.test.js
+// alertness
+//   ✓ returns drink coffee if tired or keep working if not tired (11 ms)
+// stressLevel
+//   ✓ returns relax if you are stressed and keep going if you are not stressed
+// inBudget
+//   ✓ returns in budget if price is lower than 300 (8 ms)
+// smallNum
+//   ✕ takes in two arguments and returns the smaller number (16 ms)
+
+// ● smallNum › takes in two arguments and returns the smaller number
+
+//   ReferenceError: smallNum is not defined
+
+const smallNum = (num1, num2) => {
+    if(num1 < num2){
+        return num1
+    } else if (num2 < num1){
+        return num2
+    }
+}
+
+smallNum(24, 76)
+
+
 // Write the function that will make the test pass.
 // Write the test for a function that takes in one argument(number) and returns whether the number is odd.
 // Write the function that will make the test pass.
