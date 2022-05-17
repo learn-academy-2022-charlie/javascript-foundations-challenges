@@ -55,13 +55,75 @@ const money = (number) => {
     }
 }
 // Write the test for a function that takes in two arguments(numbers) and returns the smaller number.
+
+describe("smallerNum", () => {
+    it("takes two numbers and returns smaller number", () => {
+        expect(smallerNum(10, 23)).toEqual(10)
+    })
+})
 // Write the function that will make the test pass.
+
+const smallerNum = (num1, num2) => {
+    if(num1 < num2) {
+        return num1
+    } else {
+        return num2
+    }
+}
+
+
 // Write the test for a function that takes in one argument(number) and returns whether the number is odd.
+
+describe("isOdd", () => {
+    it("return odd if the number is odd", () => {
+        expect(isOdd(9)).toEqual("odd")
+    })
+})
+
 // Write the function that will make the test pass.
+
+const isOdd = (num) => {
+    if(num % 2 !== 0) {
+        return "odd"
+    }
+}
+
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
+
+describe("fruitColor", () => {
+    it("return yellow if banna, red if apple, purple if grape", () => {
+        expect(fruitColor("baNana")).toEqual("yellow")
+        expect(fruitColor("AppLe")).toEqual("red")
+        expect(fruitColor("GrapE")).toEqual("purple")
+    })
+})
+
 // Write the function that will make the test pass.
+
+const fruitColor = (fruit) => {
+    if (fruit.toLowerCase() === "banana"){
+        return "yellow"
+    } else if (fruit.toLowerCase() === "apple") {
+        return "red"
+    } else if (fruit.toLowerCase() === "grape") {
+        return "purple"
+    }
+}
+
 // Write the test for a function called rick that returns "Morty".
+
+describe("rick", () => {
+    it("function returns Morty", () => {
+        expect(rick()).toEqual("Morty")
+    })
+})
+
 // Write the function that will make the test pass.
+
+const rick = () => {
+    return "Morty"
+}
+
 // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
 // Write the function that will make the test pass.
 // Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
