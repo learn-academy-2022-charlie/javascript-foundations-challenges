@@ -48,8 +48,54 @@ const relax = (string) => {
 // 3. Write the test for a function that returns "in budget" if a price is lower than $300.  
 //   - Write the function that will make the test pass.
 
+describe("inBudget", () => {
+    it("returns 'in budget' if price is lower than $300", () => {
+        expect(inBudget(299.99)).toEqual("in budget")
+    })
+})
+
+// Pseudocode
+// create function called inBudget
+// parameters = a number
+// logic
+//      - compare if number is less than 300
+//          if is less return 'in budget'
+
+const inBudget = (number) => {
+    if(number < 300) {
+        return "in budget"
+    }
+}
+
 // 4. Write the test for a function that takes in two arguments(numbers) and returns the smaller number.
 //   - Write the function that will make the test pass.
+
+// write a function named smallerNumber
+// takes in two numbers
+// compares the numbers
+//      if number1 was less than number2 returns number1
+//      if number1 was greater than number2 returns number2
+//      if number1 is equal to number2 return 'equal'
+//      returns smaller number
+
+describe("smallerNumber", () => {
+    it("returns smaller number of two numbers", () => {
+        expect(smallerNumber(10, 20)).toEqual(10)
+        expect(smallerNumber(100, 1000)).toEqual(100)
+        expect(smallerNumber(-1, -500)).toEqual(-500)
+        expect(smallerNumber(5, 5)).toEqual("5 === 5")
+    })
+})
+
+const smallerNumber = (num1, num2) => {
+    if(num1 < num2) {
+        return num1
+    } else if(num2 < num1) {
+        return num2
+    } else {
+        return `${num1} === ${num2}`
+    }
+}
 
 // 5. Write the test for a function that takes in one argument(number) and returns whether the number is odd.
 //   - Write the function that will make the test pass.
