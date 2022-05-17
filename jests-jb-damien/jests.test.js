@@ -100,8 +100,42 @@ const smallerNumber = (num1, num2) => {
 // 5. Write the test for a function that takes in one argument(number) and returns whether the number is odd.
 //   - Write the function that will make the test pass.
 
+// psuedo  write a function named oddNum    
+// takes in a parameter that is a number
+// if the number is odd returns odd
+// if the number is even returns even
+ 
+describe("oddNum", ()  => {
+    it("returns if a number is odd", () => {
+       
+        expect(oddNum(3)).toEqual("odd")
+        expect(oddNum(4)).toEqual("even")
+        expect(oddNum(0)).toEqual("zero")
+    })
+})
+
+const oddNum = (number) => {
+    if(number % 2 === 1 || number % 2 === -1) {
+        return "odd"
+    }else if(number === 0){
+        return "zero"
+    } else {
+        return "even"
+    }
+}
+
+
 // 6. Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
 //   - Write the function that will make the test pass.
+// pseudo code function = pineapple takes in color string and returns banana if color yellow, return apple if color is red, and returns grape if color is purple.
+
+describe("pineappple", () => {
+    it("returns different fruit name depending on color", () => {
+        expect(pineapple("banana")).toEqual("yellow")
+        expect(pineapple("apple")).toEqual("red")
+        expect(pineapple("grape")).toEqual("purple")
+    })
+})
 
 // 7. Write the test for a function called `rick` that returns "Morty".
 //   - Write the function that will make the test pass.
