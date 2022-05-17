@@ -125,8 +125,23 @@ const rick = () => {
 }
 
 // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
+
+describe("greeter", () => {
+    it("returns a greeting with given name", () => {
+        expect(greeter("Morbius")).toEqual("How have you been Morbius")
+    })
+})
 // Write the function that will make the test pass.
-// Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
+
+const greeter = (string) => {
+    return `How have you been ${string}`
+}
+// Write the test for a function called oddOrEven that 
+// takes a number as an argument and logs whether the number is odd or even.
+
+describe ("oddOrEven", () => {
+    it("takes a number as ans ")
+})
 // Write the function that will make the test pass.
 // Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
 // Write the function that will make the test pass.
