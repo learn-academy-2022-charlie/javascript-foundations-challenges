@@ -140,6 +140,8 @@ describe("smallNum", () => {
 
 //   ReferenceError: smallNum is not defined
 
+// Write the function that will make the test pass.
+
 const smallNum = (num1, num2) => {
     if(num1 < num2){
         return num1
@@ -150,13 +152,110 @@ const smallNum = (num1, num2) => {
 
 smallNum(24, 76)
 
+// Write the test for a function that takes in one argument(number) and returns whether the number is odd.
+
+describe("isOdd", () => {
+    it("takes in one number and returns whether the number is odd or not", () => {
+        let oddNum = 7
+        expect(isOdd(oddNum)).toEqual(`${oddNum} is odd`)
+    })
+})
+
+// FAIL  ./jest.test.js (5.82 s)
+// alertness
+//   ✓ returns drink coffee if tired or keep working if not tired (18 ms)
+// stressLevel
+//   ✓ returns relax if you are stressed and keep going if you are not stressed (3 ms)
+// inBudget
+//   ✓ returns in budget if price is lower than 300 (3 ms)
+// smallNum
+//   ✓ takes in two arguments and returns the smaller number (35 ms)
+// isOdd
+//   ✕ takes in one number and returns whether the number is odd or not (47 ms)
+
+// ● isOdd › takes in one number and returns whether the number is odd or not
+
+//   ReferenceError: isOdd is not defined
 
 // Write the function that will make the test pass.
-// Write the test for a function that takes in one argument(number) and returns whether the number is odd.
-// Write the function that will make the test pass.
+
+const isOdd = (number) => {
+    if(number % 2 !== 0) {
+        return `${number} is odd`
+    }
+}
+
+isOdd(7)
+
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
+
+describe("fruitColor", () => {
+    it("takes in a fruit and returns yellow if the argument is banana, red if apple and purple if grape", () => {
+        expect(fruitColor("banana")).toEqual("yellow")
+    })
+})
+
+// FAIL  ./jest.test.js
+// alertness
+//   ✓ returns drink coffee if tired or keep working if not tired (8 ms)
+// stressLevel
+//   ✓ returns relax if you are stressed and keep going if you are not stressed (1 ms)
+// inBudget
+//   ✓ returns in budget if price is lower than 300 (1 ms)
+// smallNum
+//   ✓ takes in two arguments and returns the smaller number (1 ms)
+// isOdd
+//   ✓ takes in one number and returns whether the number is odd or not
+// fruitColor
+//   ✕ takes in a fruit and returns yellow if the argument is banana, red if apple and purple if grape (1 ms)
+
+// ● fruitColor › takes in a fruit and returns yellow if the argument is banana, red if apple and purple if grape
+
+//   ReferenceError: fruitColor is not defined
+
 // Write the function that will make the test pass.
+
+const fruitColor = (fruit) => {
+    if(fruit === "banana") {
+        return "yellow"
+    } else if(fruit === "apple") {
+        return "red"
+    } else if(fruit === "grape") {
+        return "purple"
+    }
+}
+
+fruitColor("banana")
+
+// PASS  ./jest.test.js
+// alertness
+//   ✓ returns drink coffee if tired or keep working if not tired (12 ms)
+// stressLevel
+//   ✓ returns relax if you are stressed and keep going if you are not stressed (1 ms)
+// inBudget
+//   ✓ returns in budget if price is lower than 300 (1 ms)
+// smallNum
+//   ✓ takes in two arguments and returns the smaller number (1 ms)
+// isOdd
+//   ✓ takes in one number and returns whether the number is odd or not (1 ms)
+// fruitColor
+//   ✓ takes in a fruit and returns yellow if the argument is banana, red if apple and purple if grape (1 ms)
+
+// Test Suites: 1 passed, 1 total
+// Tests:       6 passed, 6 total
+// Snapshots:   0 total
+// Time:        2.012 s
+// Ran all test suites.
+// ✨  Done in 7.57s.
+
 // Write the test for a function called rick that returns "Morty".
+
+describe("rick", () => {
+    it("returns Morty", () => {
+        expect(rick()).toEqual ("Morty")
+    })
+})
+
 // Write the function that will make the test pass.
 // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
 // Write the function that will make the test pass.
