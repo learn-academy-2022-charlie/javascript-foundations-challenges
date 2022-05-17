@@ -1,7 +1,7 @@
 // Write the test for a function that returns "drink coffee" if you are tired and "keep working" if you are not tired.
 // Write the function that will make the test pass.
 describe("coffee",() => {
-  it("return a string drink coffee or keep working based on if the user is tired or not", () =>{
+  it("return a string drink coffee or keep working based on if the user is tired or not", () => {
     expect(coffee("yes")).toEqual("drink coffee")
     expect(coffee("no")).toEqual("keep working")
   })
@@ -17,6 +17,24 @@ console.log(coffee("yes"))
 
 // Write the test for a function that returns "relax" if you are stressed and "keep going" if you are not stressed.
 // Write the function that will make the test pass.
+
+describe("relaxStressed", () => {
+  it("returns relax if the user is stressed and returns keep going if they are not stressed", () => {
+    expect(relaxStressed("no")).toEqual("keep going")
+    expect(relaxStressed("yes")).toEqual("relax")
+  })
+})
+
+const relaxStressed = (answer) => {
+  if(answer === "yes") {
+    return `relax`
+  } else {
+    return `keep going`
+  }
+}
+console.log(relaxStressed("yes"))
+
+
 
 
 // Write the test for a function that returns "in budget" if a price is lower than $300.
