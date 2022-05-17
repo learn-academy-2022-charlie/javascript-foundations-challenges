@@ -169,7 +169,7 @@ describe ("doubler", () =>{
 // Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
 
 describe ("multiply", () => {
-  it ("returns one of the numbers multiplied by the other", () => {
+  it ("returns one of the numbers multiplied by the other number", () => {
     expect(multiply(2, 6)).toEqual(12)
   })
 })
