@@ -88,7 +88,7 @@ describe("stress", () => {
 const price = (money) => {
   if (money < 300) {
     return "in budget"
-} else { 
+} else {
   return "out of budget"
  }
 }
@@ -115,14 +115,41 @@ const price = (money) => {
       return number1
     }
   }
-    
+
 
 
 
 // Write the test for a function that takes in one argument(number) and returns whether the number is odd.
+describe("oddNum", () => {
+  it("returns number if odd", () => {
+    expect(oddNum(3)).toEqual("3 is odd")
+  })
+})
+
+
 // Write the function that will make the test pass.
+
+const oddNum = (number) => {
+  if(number % 2 !== 0){
+    return `${number} is odd`
+  } else {
+    return "not odd number"
+  }
+}
+
+
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
+
+describe("fruitColor", () => {
+  it("returns what color a fruit is", () => {
+    expect("fruit")
+  })
+})
+
 // Write the function that will make the test pass.
+
+
+
 // Write the test for a function called rick that returns "Morty".
 // Write the function that will make the test pass.
 // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
