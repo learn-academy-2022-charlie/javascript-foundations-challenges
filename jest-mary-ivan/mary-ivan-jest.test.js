@@ -53,7 +53,11 @@ describe("stress", () => {
   })
 })
 
-const stress = (work) => {
+
+
+// Write the function that will make the test pass.
+
+  const stress = (work) => {
   if(work === "stressed") {
     return "relax"
   } else { if(work === "not stressed") {
@@ -64,13 +68,57 @@ const stress = (work) => {
 }
 
 
-
-
-// Write the function that will make the test pass.
 // Write the test for a function that returns "in budget" if a price is lower than $300.
+
+
+  describe("price", () => {
+    it("in budget or out of budget", () => {
+      expect(price(100)).toEqual("in budget")
+      expect(price(500)).toEqual("out of budget")
+    })
+  })
+
+
+
+
+
+
 // Write the function that will make the test pass.
+
+const price = (money) => {
+  if (money < 300) {
+    return "in budget"
+} else { 
+  return "out of budget"
+ }
+}
+
+
 // Write the test for a function that takes in two arguments(numbers) and returns the smaller number.
+
+
+    describe("smallerNum", () => {
+      it("will return smaller number", () => {
+        expect(smallerNum(500, 250)).toEqual(250)
+      })
+    })
+
+
+
+
 // Write the function that will make the test pass.
+
+  const smallerNum = (number1, number2) => {
+    if(number1 > number2 ){
+      return number2
+    } else {
+      return number1
+    }
+  }
+    
+
+
+
 // Write the test for a function that takes in one argument(number) and returns whether the number is odd.
 // Write the function that will make the test pass.
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
