@@ -42,8 +42,30 @@ describe("Relax Test Suite", () => {
 })
 
 // Write the test for a function that returns "in budget" if a price is lower than $300.
+
+const budget = (number) => {
+    if(number < 300){
+        return "in budget"
+    } else{
+        return "oh no"
+    }
+}
+
 // Write the function that will make the test pass.
+
+describe("budget", () => {
+    it("Test Fuction for budget, returns in budget if number is under 300, returns oh no otherwise", () => {
+        expect(budget(200)).toEqual("in budget")
+        expect(budget(302)).toEqual("oh no")
+    })
+})
 // Write the test for a function that takes in two arguments(numbers) and returns the smaller number.
+describe("smallNum", () => {
+    it("Test Fuction for smallNum, returns in budget if number is under 300, returns oh no otherwise", () => {
+        expect(budget(200)).toEqual("in budget")
+        expect(budget(302)).toEqual("oh no")
+    })
+})
 // Write the function that will make the test pass.
 // Write the test for a function that takes in one argument(number) and returns whether the number is odd.
 // Write the function that will make the test pass.
