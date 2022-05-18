@@ -69,9 +69,70 @@ console.log(regLatte.latteProfile())
 
 
 // Write the code that makes a double shot hazelnut latte with almond milk. Then, log the latte's profile.
-//
+
+  let hazLatte = new Latte ("hazelnut", "almond milk", 2)
+console.log(hazLatte.latteProfile())
+
+
 // Volume of a Cylinder
+
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
-//
+
+    class Cylinder { 
+      constructor (radius, height){
+        this.radius = radius
+        this.height = height
+        }
+        volCylinder() {
+          return π * this.radius * 2 * this.height 
+        }
+    }
+let π = Math.PI
+let sphere = new Cylinder ( 10 , 25)
+let rounded = sphere.volCylinder().toFixed(4)
+// console.log(sphere)
+
+// console.log(sphere.volCylinder())
+
+console.log(rounded)
+
+
+
+
+let newSphere = new Cylinder ( 5, 10)
+
+console.log(newSphere)
+
+
+
+
+
+
+
 // Write the code that creates three unique cylinder objects
 //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
