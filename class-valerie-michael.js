@@ -57,5 +57,21 @@ console.log(hazelLatte.latteProfile())
 // Volume of a Cylinder
 
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
-//
+
+class Cylinder {
+  constructor (radius, height){
+    this.radius = radius
+    this.height = height
+    this.π = (22/7)
+  }
+
+    volume(){
+    return this.π * this.radius * 2 * this.height
+  }
+}
+const cylinder1 = new Cylinder (1, 1)
+// console.log(cylinder1)
+console.log(cylinder1.volume())
+
+
 // Write the code that creates three unique cylinder objects
