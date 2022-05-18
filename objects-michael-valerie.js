@@ -48,8 +48,12 @@ console.log(describeProduct(product))
 const lunch = {
   name: "PB and Banana",
   type: "sandwich",
-  ingredients: ["bread", "peanut butter", "banana"]
-}
+  ingredients: ["bread", "peanut butter", "banana"],
+  sentence: function(){ 
+    return `The ingredients for a ${lunch.name} ${lunch.type} are ${lunch.ingredients[0]}, ${lunch.ingredients[1]}, and ${lunch.ingredients[2]}.`
+  }
+  }
+
 
 // Write the code that accesses the ingredients property.
 console.log(lunch.ingredients)
@@ -64,6 +68,9 @@ const lunchSentence = (object) => {
 console.log(lunchSentence(lunch))
 
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+
+console.log(lunch.sentence())
+
 
 
 // Consider this variable:
