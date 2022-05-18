@@ -27,18 +27,6 @@ const person = {
   }
 
     console.log(person.sen())
-
-    
-// const together = (sen) => {
-//    return this.firstName + this.lastName + "is from" + this.homePlanet}
-
-
-
-
-
-
-
-
   
 
 // Consider this variable:
