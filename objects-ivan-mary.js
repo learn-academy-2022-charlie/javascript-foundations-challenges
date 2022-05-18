@@ -22,10 +22,11 @@ const person = {
 
 // Update the person object with a method that logs "Arthur Dent is from planet Earth".
 
-    person.sentence =  function () {
-    return console.log(`${this.firstName} ${this.lastName} "is from" ${this.homePlanet}`) 
+    person.sen =  function () {
+    return console.log(`${this.firstName} ${this.lastName} "is from" ${this.homePlanet}`)
+  }
 
-    consol.log(person.sentence())
+    console.log(person.sen())
 
     
 // const together = (sen) => {
