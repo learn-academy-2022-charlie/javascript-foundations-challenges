@@ -30,21 +30,42 @@ const product = {
 }
 
 // Write a function called describeProduct that takes the product object as an argument and logs "The product is a chair. It costs $24.99".
-
-
+const describeProduct = (object) => {
+  return `The product is a ${product.name}. It costs $${product.price}`
+}
+console.log(describeProduct(product))
 
 // Write a function called totalWithTax that takes the product object as an argument and returns the total price of the chair that includes a 7% sales tax rounded to two decimals.
+
+// const totalWithTax = (object) => {
+//   let num1 = (product.price * 1.07)
+//   return num1.toFixed(2)
+// }
+// console.log(totalWithTax(product))
 // Consider this variable:
 
-// const lunch = {
-//   name: "PB and Banana",
-//   type: "sandwich",
-//   ingredients: ["bread", "peanut butter", "banana"]
-// }
+
+const lunch = {
+  name: "PB and Banana",
+  type: "sandwich",
+  ingredients: ["bread", "peanut butter", "banana"]
+}
+
 // Write the code that accesses the ingredients property.
+console.log(lunch.ingredients)
+
 // Write the code that access the third ingredient of the lunch object.
+console.log(lunch.ingredients[2])
+
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+const lunchSentence = (object) => {
+  return `The ingredients for a ${object.name} ${object.type} are ${object.ingredients[0]}, ${object.ingredients[1]}, and ${object.ingredients[2]}.`
+}
+console.log(lunchSentence(lunch))
+
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+
+
 // Consider this variable:
 
 // const animals = [
