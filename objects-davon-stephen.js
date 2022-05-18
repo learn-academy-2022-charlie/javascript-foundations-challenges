@@ -3,7 +3,7 @@
 const person = {
  firstName: "Arthur",
  lastName: "Dent"
- 
+
 }
 // Write the code that accesses the first name of the person object.
 const {firstName} = person
@@ -27,34 +27,78 @@ console.log(person.whereIs());
 //output:Arthur Dent is from Earth
 // Consider this variable:
 
-// const product = {
-//   name: "chair",
-//   price: 24.99
-// }
+const product = {
+  name: "chair",
+  price: 24.99
+}
 // Write a function called describeProduct that takes the product object as an argument and logs "The product is a chair. It costs $24.99".
+const describeProduct = (object) => {
+  return `The product is a ${object.name}. It costs ${object.price}.`
+}
+console.log(describeProduct(product));
 // Write a function called totalWithTax that takes the product object as an argument and returns the total price of the chair that includes a 7% sales tax rounded to two decimals.
+const totalWithTax = (object) => {
+  return object.price + Math.round(object.price * .07)
+}
+console.log(totalWithTax(product))
 // Consider this variable:
 
-// const lunch = {
-//   name: "PB and Banana",
-//   type: "sandwich",
-//   ingredients: ["bread", "peanut butter", "banana"]
-// }
+const lunch = {
+  name: "PB and Banana",
+  type: "sandwich",
+  ingredients: ["bread", "peanut butter", "banana"]
+}
+
 // Write the code that accesses the ingredients property.
+const {ingredients} = lunch
+console.log(ingredients);
+
 // Write the code that access the third ingredient of the lunch object.
+console.log(ingredients[2]);
+
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+
+const sandwich = (object) => {
+  return `The ingredients for a ${object.name} ${object.type} are ${object.ingredients}.`
+}
+console.log(sandwich(lunch));
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+lunch['sandwich'] = function() {
+  return `The ingredients for a ${this.name} ${this.type} are ${this.ingredients}.`
+}
+console.log(lunch.sandwich());
 // Consider this variable:
 
-// const animals = [
-//   { name: "Waffles", type: "dog", age: 7 },
-//   { name: "Fluffy", type: "cat", age: 14 },
-//   { name: "Spelunky", type: "dog", age: 4 },
-//   { name: "Hank", type: "cat", age: 11 }
-// ]
+const animals = [
+  { name: "Waffles", type: "dog", age: 7 },
+  { name: "Fluffy", type: "cat", age: 14 },
+  { name: "Spelunky", type: "dog", age: 4 },
+  { name: "Hank", type: "cat", age: 11 }
+]
+
 // Create a function that takes in an array of animal objects and returns a new array with only the objects that are cats.
+
+const onlyCats = (array) => {
+  return array.filter( value => {
+    return value.type === "cat"
+  })
+}
+console.log(onlyCats(animals));
 // Create a function that takes in an array of animal objects and returns a new array with only the names of the animals.
+const onlyNames = (array) => {
+  return array.map(value =>{
+    return value.name
+  })
+}
+console.log(onlyNames(animals));
 // Create a function that takes in an array of animal objects and returns a new array of the names of the animals that are more than 10 years old.
+const olderPets = (array) => {
+  return array.filter( value => {
+      value.age > 10
+    }
+  })
+}
+console.log(olderPets(animals));
 // Create a function that takes in an array of animal objects and returns a new array with a sentence about each animal.
 // Consider this variable:
 
