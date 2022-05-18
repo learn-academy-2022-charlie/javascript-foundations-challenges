@@ -142,16 +142,41 @@ const oddNum = (number) => {
 
 describe("fruitColor", () => {
   it("returns what color a fruit is", () => {
-    expect("fruit")
+    expect(fruitColor("banana", "apple", "grape")).toEqual("yellow", "red", "purple")
   })
 })
 
 // Write the function that will make the test pass.
 
+  const fruitColor = (type) => {
+    if(type === "banana"){
+      return "yellow"
+    }else if(type === apple){
+      return "red"
+    }else{
+      return "purple"
+    }
+  }
+
 
 
 // Write the test for a function called rick that returns "Morty".
+  
+  describe("rick", () => {
+    it("will return Morty", () => {
+      expect(rick()).toEqual("Morty")
+    })
+  })
+
+
+
 // Write the function that will make the test pass.
+
+  const rick = (show) => {
+    return "Morty"
+  }
+
+
 // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
 // Write the function that will make the test pass.
 // Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
