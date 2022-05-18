@@ -62,3 +62,22 @@ console.log(doubleLatte.latteProfile());
 
 // Volume of a Cylinder
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
+class Cylinder{
+  constructor(raduisNumber,heightNumber){
+      this.raduis = raduisNumber
+      this.height = heightNumber
+      this.π = 3.14159265359 
+      this.volume = 0
+  }
+  cylinderVolume(){
+    this.volume = this.π * this.raduis * (2 * this.height)
+    return Math.round(this.volume * 10000) / 10000 
+  }
+}
+var cylinder1 = new Cylinder(4,8)
+console.log(cylinder1.cylinderVolume());
+//Write the code that creates three unique cylinder objects
+var cylinder2 = new Cylinder(75858,5000)
+var cylinder3 = new Cylinder(6,200000)
+console.log(cylinder2.cylinderVolume());
+console.log(cylinder3.cylinderVolume());
