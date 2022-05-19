@@ -64,8 +64,8 @@ class Tesla extends Car{
         return 'Braking'
     }
 }
-var myTesla = new Tesla()
-myTesla.year = 2020
+var myTesla = new Tesla("Tesla", 2020)
+// myTesla.year = 2020
 // console.log(myTesla)
 // 5. **Story**: As a programmer, I can give my Tesla a model on initialization.
 // - The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
