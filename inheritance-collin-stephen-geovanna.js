@@ -5,14 +5,45 @@ class Car {
         this.brand = typeBrandString
         this.wheels = amountOfWheelsNum
         this.year = yearNum
-        this.model = modelString  
+        this.model = modelString
+        this.lights = false
+        this.signal = false
+        this.speed = 0
     }
     wheelsAmount(){
         return this.wheels
     }
+    lightSwitch(){
+      if(this.lights === false){
+        this.lights = true
+        return "Lights on"
+      }else{
+        this.lights = false
+        return "Lights off"
+      }
+    }
+    signalSwitch(){
+      if(this.signal === false){
+        this.signal = true
+        return "Signaling"
+      }else{
+        this.signal = false
+        return "Not signaling"
+      }
+    }
 }
 
 let myCar = new Car("Honda", 4, 2015, "Civic Si")
+console.log(myCar.lightSwitch());
+console.log(myCar.lightSwitch());
+console.log(myCar);
+
+// Story: As a programmer, I can give all my cars a lights property. Lights start in the off position.
+
+// Story: As a programmer, I can turn the lights in all my cars on and off.
+
+// Story: As a programmer, I can give all my cars a signal property. Turn signal starts in the off position.
+
 // console.log(myCar.wheelsAmount())
 // ---> Car { brand: 'Honda', wheels: 4, year: 2015, model: 'generic car' }
 
@@ -37,9 +68,21 @@ class Tesla extends Car {
         super(typeBrandString, amountOfWheelsNum, yearNum, modelString)
         this.electric = true
     }
+    accelerate(){
+      this.speed += 10
+      return "Speeding up!"
+    }
+    braking(){
+      this.speed -= 7
+      return "Slowing down..."
+    }
 }
 let myTesla = new Tesla ("Tesla", 4, 2018, "X")
 console.log(myTesla)
+console.log(myTesla.accelerate());
+console.log(myTesla.braking());
+console.log(myTesla);
+
 
 // Create an object called myTesla which is a instance of class Tesla
 // Story: As a programmer, I can give my Tesla a model on initialization.
@@ -60,17 +103,34 @@ class Toyota extends Car {
     }
 }
 // create an object called myToyota which is a instance of class Toyota
+let myToyota = new Toyota("Toyota", 4, 2002, "Tundra")
 // Story: As a programmer, I can give my Toyota a model on initialization.
+
 // The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
+
 // Story: As a programmer, I can give my Toyota a year on initialization.
+
 // The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
+console.log(myToyota);
 // Story: As a programmer, I can make a Volkswagen car.
+
 // class Volkswagen inherits from class Car
+class Volkswagen extends Car {
+  constructor(typeBrandString, amountOfWheelsNum, yearNum, modelString){
+    super(typeBrandString, amountOfWheelsNum, yearNum, modelString)
+  }
+}
+
 // create an object called myVolkswagen which is a instance of class Volkswagen
+let myVolkswagen = new Volkswagen("Volkswagen", 4, 1978, "Bug")
 // Story: As a programmer, I can give my Volkswagen a model on initialization.
+
 // The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
+
 // Story: As a programmer, I can give my Volkswagen a year on initialization.
+
 // The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
+
 // Story: As a programmer, I can give all my cars a lights property. Lights start in the off position.
 
 // Story: As a programmer, I can turn the lights in all my cars on and off.
