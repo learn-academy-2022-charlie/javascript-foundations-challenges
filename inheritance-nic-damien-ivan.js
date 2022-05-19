@@ -89,7 +89,7 @@ class Toyota extends Car{
         return 'Braking'
     }
 }
-var myToyota = new Toyota()
+var myToyota = new Toyota("Toyota", 2017)
 // console.log(myToyota)
 
 
@@ -115,7 +115,7 @@ class Volkswagen extends Car{
         return 'Braking'
     }
 }
-var myVolkswagen = new Volkswagen()
+var myVolkswagen = new Volkswagen("Volkswagen", 2080)
 // console.log(myVolkswagen)
 
 
