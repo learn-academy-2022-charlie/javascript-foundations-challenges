@@ -36,6 +36,9 @@ class Toyota extends Car {
 const testToyota = new Toyota("camry", 2020, 3)
 console.log(testToyota)
 
+
+
+
 // Story: As a programmer, I can make a Toyota car.
 // class Toyota inherits from class Car
 // create an object called myToyota which is a instance of class Toyota
