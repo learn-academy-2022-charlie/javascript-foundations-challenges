@@ -9,6 +9,9 @@ class Car {
         this.lights = "off"
         this.turnSignal = "off"
         this.speed = 0
+        this.accel = 0
+        this.decel = 0
+    
     }
     wheels() {
         this.wheel = 4
@@ -31,21 +34,23 @@ class Car {
             this.turnSignal = "off"
             return "Signal off"
         }
-
+    }
+    currentSpeed(){
+        return this.speed +" mph"
     }
     accelerate(){
-            this.speed = this.speed 
+            this.speed = this.speed + this.accel
             return this.speed +" mph"
     }
     braking (){
-            this.speed = this.speed
+            this.speed = this.speed - this.decel
             return this.speed +" mph"
     }
 }
 
 // Write a variable called myCar which is an instance of the class Car
 
-var myCar = new Car("Generic Car", 2022)
+var myCar = new Car("Genesis", 2010)
 console.log(myCar)
 
 // Story: As a programmer, I can give my car a model on initialization.
@@ -133,13 +138,16 @@ console.log(myTesla)
 
 // Story: As a programmer, I can determine the speed of a car. Speed starts at 0 mph.
 
-console.log(Tesla)
-console.log(Tesla.accelerate())
-console.log(Tesla)
+console.log(myTesla.currentSpeed())
 
 // Story: As a programmer, I can speed my Tesla up by 10 per acceleration.
-
+myTesla.accel = 10
+console.log(myTesla.accelerate())
+console.log(myTesla)
 // Story: As a programmer, I can slow my Tesla down by 7 per braking.
+
+myTesla.decel = 7
+console.log(myTesla.braking())
 
 // Story: As a programmer, I can speed my Toyota up by 5 per acceleration.
 
